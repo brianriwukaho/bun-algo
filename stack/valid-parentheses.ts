@@ -7,7 +7,7 @@ const matchingBracket: Record<string, string> = {
 };
 
 export function isValid(s: string): boolean {
-  const stack: any[] = [];
+  const stack: string[] = [];
 
   if (s.length % 2 !== 0) {
     return false;
@@ -23,8 +23,10 @@ export function isValid(s: string): boolean {
 
       const correspondingBracket = stack.pop();
 
-      if (currentBracket !== matchingBracket[correspondingBracket]) {
-        console.log({ currentBracket, correspondingBracket });
+      if (
+        !!correspondingBracket &&
+        currentBracket !== matchingBracket[correspondingBracket]
+      ) {
         return false;
       }
     } else {
@@ -35,8 +37,5 @@ export function isValid(s: string): boolean {
   if (stack.length > 0) {
     return false;
   }
-
   return true;
 }
-
-console.log(isValid("{[()]}"));
