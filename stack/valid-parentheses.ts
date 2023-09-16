@@ -1,10 +1,10 @@
-const isClosingBracket = (bracket: string): boolean => {
-  const closingBrackets: Record<string, boolean> = {
-    "]": true,
-    "}": true,
-    ")": true,
-  };
+const closingBrackets: Record<string, boolean> = {
+  "]": true,
+  "}": true,
+  ")": true,
+};
 
+const isClosingBracket = (bracket: string): boolean => {
   return closingBrackets[bracket];
 };
 
