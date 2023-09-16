@@ -1,12 +1,4 @@
-const closingBrackets: Record<string, boolean> = {
-  "]": true,
-  "}": true,
-  ")": true,
-};
-
-const isClosingBracket = (bracket: string): boolean => {
-  return closingBrackets[bracket];
-};
+const closingBrackets = new Set(["]", "}", ")"]);
 
 const matchingBracket: Record<string, string> = {
   "[": "]",
@@ -24,7 +16,7 @@ export function isValid(s: string): boolean {
   for (let i = 0; i < s.length; i++) {
     const currentBracket = s[i];
 
-    if (isClosingBracket(currentBracket)) {
+    if (closingBrackets.has(currentBracket)) {
       if (stack.length === 0) {
         return false;
       }
