@@ -1,15 +1,5 @@
 # bun-algo
 
-To install dependencies:
+Bun provides a test runner, static typing and formatting out of the box with minimal setup. It's also blazingly fast. As a result it's a great javascript run-time to practice algorithms and data-structures locally in typescript 😊😊😊
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.0.0. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+With bun you don't need to worry about setting up your node project, just write scripts and test them just as easily in record time!
